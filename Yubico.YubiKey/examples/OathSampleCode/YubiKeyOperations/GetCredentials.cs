@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using Yubico.YubiKey.Oath;
 using Yubico.YubiKey.Sample.SharedCode;
@@ -40,16 +41,16 @@ namespace Yubico.YubiKey.Sample.OathSampleCode
             var outputList = new StringBuilder("");
             if (credentials.Count > 0)
             {
-                _ = outputList.AppendLine($"Number of credentials: {credentials.Count}");
+                _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Number of credentials: {credentials.Count}");
                 _ = outputList.AppendLine();
                 foreach (Credential currentCredential in credentials)
                 {
-                    _ = outputList.AppendLine($"Issuer    : {currentCredential.Issuer}");
-                    _ = outputList.AppendLine($"Account   : {currentCredential.AccountName}");
-                    _ = outputList.AppendLine($"Type      : {currentCredential.Type}");
-                    _ = outputList.AppendLine($"Period    : {(int?)currentCredential.Period}sec");
-                    _ = outputList.AppendLine($"Algorithm : {currentCredential.Algorithm}");
-                    _ = outputList.AppendLine($"Name      : {currentCredential.Name}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Issuer    : {currentCredential.Issuer}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Account   : {currentCredential.AccountName}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Type      : {currentCredential.Type}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Period    : {(int?)currentCredential.Period}sec");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Algorithm : {currentCredential.Algorithm}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Name      : {currentCredential.Name}");
                     _ = outputList.AppendLine();
                 }
             }

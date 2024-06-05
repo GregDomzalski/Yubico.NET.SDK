@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
 using System.Text;
 using Yubico.YubiKey.Oath;
 using Yubico.YubiKey.Sample.SharedCode;
@@ -59,15 +60,15 @@ namespace Yubico.YubiKey.Sample.OathSampleCode
         {
             var outputList = new StringBuilder("Renamed credential:");
             _ = outputList.AppendLine();
-            _ = outputList.AppendLine($"Issuer    : {credential.Issuer}");
-            _ = outputList.AppendLine($"Account   : {credential.AccountName}");
-            _ = outputList.AppendLine($"Type      : {credential.Type}");
-            _ = outputList.AppendLine($"Period    : {(int?)credential.Period}sec");
-            _ = outputList.AppendLine($"Digits    : {credential.Digits}");
-            _ = outputList.AppendLine($"Algorithm : {credential.Algorithm}");
-            _ = outputList.AppendLine($"Secret    : {credential.Secret}");
-            _ = outputList.AppendLine($"Counter   : {credential.Counter}");
-            _ = outputList.AppendLine($"Touch     : {credential.RequiresTouch}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Issuer    : {credential.Issuer}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Account   : {credential.AccountName}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Type      : {credential.Type}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Period    : {(int?)credential.Period}sec");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Digits    : {credential.Digits}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Algorithm : {credential.Algorithm}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Secret    : {credential.Secret}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Counter   : {credential.Counter}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Touch     : {credential.RequiresTouch}");
 
             SampleMenu.WriteMessage(MessageType.Special, 0, outputList.ToString());
         }

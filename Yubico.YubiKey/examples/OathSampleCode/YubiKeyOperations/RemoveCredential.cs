@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
 using System.Text;
 using Yubico.YubiKey.Oath;
 using Yubico.YubiKey.Sample.SharedCode;
@@ -46,10 +47,10 @@ namespace Yubico.YubiKey.Sample.OathSampleCode
         {
             var outputList = new StringBuilder("Removed credential:");
             _ = outputList.AppendLine();
-            _ = outputList.AppendLine($"Issuer    : {credential.Issuer}");
-            _ = outputList.AppendLine($"Account   : {credential.AccountName}");
-            _ = outputList.AppendLine($"Type      : {credential.Type}");
-            _ = outputList.AppendLine($"Period    : {(int?)credential.Period}sec");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Issuer    : {credential.Issuer}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Account   : {credential.AccountName}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Type      : {credential.Type}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Period    : {(int?)credential.Period}sec");
 
             SampleMenu.WriteMessage(MessageType.Special, 0, outputList.ToString());
         }

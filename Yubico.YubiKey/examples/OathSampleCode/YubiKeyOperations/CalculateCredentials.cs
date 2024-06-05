@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using Yubico.YubiKey.Oath;
 using Yubico.YubiKey.Sample.SharedCode;
@@ -62,20 +63,20 @@ namespace Yubico.YubiKey.Sample.OathSampleCode
             var outputList = new StringBuilder("");
             if (credentials.Count > 0)
             {
-                _ = outputList.AppendLine($"Number of credentials: {credentials.Count}");
+                _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Number of credentials: {credentials.Count}");
                 _ = outputList.AppendLine();
                 foreach (KeyValuePair<Credential, Code> pair in credentials)
                 {
-                    _ = outputList.AppendLine($"Issuer    : {pair.Key.Issuer}");
-                    _ = outputList.AppendLine($"Account   : {pair.Key.AccountName}");
-                    _ = outputList.AppendLine($"Type      : {pair.Key.Type}");
-                    _ = outputList.AppendLine($"Period    : {(int?)pair.Key.Period}sec");
-                    _ = outputList.AppendLine($"Digits    : {pair.Key.Digits}");
-                    _ = outputList.AppendLine($"Touch     : {pair.Key.RequiresTouch}");
-                    _ = outputList.AppendLine($"OTP code  : {pair.Value.Value}");
-                    _ = outputList.AppendLine($"ValidFrom : {pair.Value.ValidFrom}");
-                    _ = outputList.AppendLine($"ValidUntil: {pair.Value.ValidUntil}");
-                    _ = outputList.AppendLine($"Name      : {pair.Key.Name}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Issuer    : {pair.Key.Issuer}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Account   : {pair.Key.AccountName}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Type      : {pair.Key.Type}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Period    : {(int?)pair.Key.Period}sec");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Digits    : {pair.Key.Digits}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Touch     : {pair.Key.RequiresTouch}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"OTP code  : {pair.Value.Value}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"ValidFrom : {pair.Value.ValidFrom}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"ValidUntil: {pair.Value.ValidUntil}");
+                    _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Name      : {pair.Key.Name}");
                     _ = outputList.AppendLine();
                 }
             }
@@ -91,15 +92,15 @@ namespace Yubico.YubiKey.Sample.OathSampleCode
         {
             var outputList = new StringBuilder("Calculated credential:");
             _ = outputList.AppendLine();
-            _ = outputList.AppendLine($"Issuer    : {credential.Issuer}");
-            _ = outputList.AppendLine($"Account   : {credential.AccountName}");
-            _ = outputList.AppendLine($"Type      : {credential.Type}");
-            _ = outputList.AppendLine($"Period    : {(int?)credential.Period}sec");
-            _ = outputList.AppendLine($"Digits    : {credential.Digits}");
-            _ = outputList.AppendLine($"OTP code  : {code.Value}");
-            _ = outputList.AppendLine($"ValidFrom : {code.ValidFrom}");
-            _ = outputList.AppendLine($"ValidUntil: {code.ValidUntil}");
-            _ = outputList.AppendLine($"Name      : {credential.Name}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Issuer    : {credential.Issuer}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Account   : {credential.AccountName}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Type      : {credential.Type}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Period    : {(int?)credential.Period}sec");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Digits    : {credential.Digits}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"OTP code  : {code.Value}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"ValidFrom : {code.ValidFrom}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"ValidUntil: {code.ValidUntil}");
+            _ = outputList.AppendLine(CultureInfo.InvariantCulture, $"Name      : {credential.Name}");
             _ = outputList.AppendLine();
 
             SampleMenu.WriteMessage(MessageType.Special, 0, outputList.ToString());
