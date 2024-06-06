@@ -141,7 +141,9 @@ namespace Yubico.YubiKey.Sample.PivSampleCode
                     return true;
                 }
 
+#pragma warning disable CA1305
                 string retryString = retriesRemaining is null ? "(unknown)" : retriesRemaining.ToString();
+#pragma warning restore CA1305
                 SampleMenu.WriteMessage(MessageType.Title, 0, "\nWrong PIN, retries remaining: " + retryString);
                 string[] menuItems = new string[] {
                     "yes",
