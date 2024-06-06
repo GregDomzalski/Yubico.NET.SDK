@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yubico.DotNetPolyfills", "Yubico.DotNetPolyfills\src\Yubico.DotNetPolyfills.csproj", "{469432E1-A0C7-4E16-9DE5-56E46312F542}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yubico.Core", "Yubico.Core\src\Yubico.Core.csproj", "{E7157F16-ACD9-427D-A0D3-568B4EF91E7C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yubico.Core.UnitTests", "Yubico.Core\tests\Yubico.Core.UnitTests.csproj", "{C580309E-4712-434A-BAFB-5BF1932860EE}"
@@ -67,12 +65,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User Manual", "User Manual"
 	ProjectSection(SolutionItems) = preProject
 		Yubico.YubiKey\docs\users-manual\intro.md = Yubico.YubiKey\docs\users-manual\intro.md
 		Yubico.YubiKey\docs\users-manual\toc.yml = Yubico.YubiKey\docs\users-manual\toc.yml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Yubico.DotNetPolyfills", "Yubico.DotNetPolyfills", "{911992B7-10DE-4433-85A2-8FED53C305BE}"
-	ProjectSection(SolutionItems) = preProject
-		Yubico.DotNetPolyfills\Directory.Build.props = Yubico.DotNetPolyfills\Directory.Build.props
-		Yubico.DotNetPolyfills\Directory.Build.targets = Yubico.DotNetPolyfills\Directory.Build.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{778EE2C1-34B3-4CAB-B89A-7F2E37BCE4CA}"
@@ -370,12 +362,6 @@ Global
 		ReleaseWithDocs|Any CPU = ReleaseWithDocs|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{469432E1-A0C7-4E16-9DE5-56E46312F542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{469432E1-A0C7-4E16-9DE5-56E46312F542}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{469432E1-A0C7-4E16-9DE5-56E46312F542}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{469432E1-A0C7-4E16-9DE5-56E46312F542}.Release|Any CPU.Build.0 = Release|Any CPU
-		{469432E1-A0C7-4E16-9DE5-56E46312F542}.ReleaseWithDocs|Any CPU.ActiveCfg = ReleaseWithDocs|Any CPU
-		{469432E1-A0C7-4E16-9DE5-56E46312F542}.ReleaseWithDocs|Any CPU.Build.0 = ReleaseWithDocs|Any CPU
 		{E7157F16-ACD9-427D-A0D3-568B4EF91E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7157F16-ACD9-427D-A0D3-568B4EF91E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7157F16-ACD9-427D-A0D3-568B4EF91E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -453,7 +439,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{469432E1-A0C7-4E16-9DE5-56E46312F542} = {911992B7-10DE-4433-85A2-8FED53C305BE}
 		{E7157F16-ACD9-427D-A0D3-568B4EF91E7C} = {45D2A3BE-5111-4890-8898-2D43DB658A40}
 		{C580309E-4712-434A-BAFB-5BF1932860EE} = {45D2A3BE-5111-4890-8898-2D43DB658A40}
 		{8FFE6A2D-4DC1-4CC0-8B96-E6CE11F29B3E} = {A487E6E9-6E7D-47CF-B1D2-70B558DFC4F7}

@@ -1,17 +1,14 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
 // Source: https://github.com/dotnet/runtime/blob/16b456426dfb5212a24bfb78bfd5d9adfcc95185/src/libraries/System.Security.Cryptography.Primitives/src/System/Security/Cryptography/CryptographicOperations.cs
 
 using System.Runtime.CompilerServices;
 
-#if !NETSTANDARD2_0
-[assembly: TypeForwardedTo(typeof(System.Security.Cryptography.CryptographicOperations))]
-
-#else
+#if !NETSTANDARD2_1_OR_GREATER
 namespace System.Security.Cryptography
 {
-    public static class CryptographicOperations
+    internal static class CryptographicOperations
     {
         /// <summary>
         /// Determine the equality of two byte sequences in an amount of time which depends on
