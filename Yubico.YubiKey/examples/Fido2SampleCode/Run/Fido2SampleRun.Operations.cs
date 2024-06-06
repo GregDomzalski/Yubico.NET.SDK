@@ -115,9 +115,7 @@ namespace Yubico.YubiKey.Sample.Fido2SampleCode
             }
             else
             {
-#pragma warning disable CA1305
-                SampleMenu.WriteMessage(MessageType.Title, 0, serial.ToString() + " : version = " + versionNumber);
-#pragma warning restore CA1305
+                SampleMenu.WriteMessage(MessageType.Title, 0, serial.Value.ToString(CultureInfo.InvariantCulture) + " : version = " + versionNumber);
             }
 
             response = _menuObject.RunMenu("\nIs this correct?", menuItems);

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using Yubico.YubiKey.Cryptography;
@@ -334,9 +335,7 @@ namespace Yubico.YubiKey.Sample.U2fSampleCode
             }
             else
             {
-#pragma warning disable CA1305
-                SampleMenu.WriteMessage(MessageType.Title, 0, serial.ToString() + " : version = " + versionNumber);
-#pragma warning restore CA1305
+                SampleMenu.WriteMessage(MessageType.Title, 0, serial.Value.ToString(CultureInfo.InvariantCulture) + " : version = " + versionNumber);
             }
 
             response = _menuObject.RunMenu("\nIs this correct?", menuItems);
